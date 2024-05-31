@@ -1,0 +1,38 @@
+body {
+  width: 200px;
+  height: 125px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  position: relative; /* Nécessaire pour le pseudo-élément */
+  overflow: hidden; /* Assure que le pseudo-élément n'éclate pas du body */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('duckgif.gif');
+  background-size: cover; /* S'assure que l'image couvre tout l'arrière-plan */
+  background-repeat: no-repeat; /* Empêche l'image de se répéter */
+  background-position: center; /* Centre l'image de fond */
+  opacity: 0.5; /* Réglez l'opacité de l'arrière-plan ici */
+  z-index: -1; /* Assure que le pseudo-élément se trouve derrière le contenu */
+}
+
+/* Style du titre */
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+/* Style du paragraphe */
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}

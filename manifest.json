@@ -1,0 +1,22 @@
+{
+    "name": "Quack Keyboard",
+    "description": "Quack like a duck every time you press a button on your keyboard.",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "files": [
+      "quack.mp3",
+      "background.jpg"
+
+    ]
+  }
